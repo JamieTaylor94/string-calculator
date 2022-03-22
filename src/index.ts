@@ -1,3 +1,4 @@
+const DEFAULT_DELIMITER = ','
 const NEW_LINE = '\n'
 const START_DELIMITER_TEMPLATE = '//'
 const END_DELIMITER_TEMPLATE = NEW_LINE
@@ -14,18 +15,18 @@ export const add = (numbers: string): number => {
   }
 
   delimiters.forEach(
-    (d) => (numbersToMutate = numbersToMutate.replaceAll(d, ','))
+    (d) => (numbersToMutate = numbersToMutate.replaceAll(d, DEFAULT_DELIMITER))
   )
 
   const parsedNumbers = numbersToMutate
-    .split(',')
+    .split(DEFAULT_DELIMITER)
     .map((n) => Number(n))
     .filter((n) => n <= 1000)
 
   const negatives = parsedNumbers.filter((n) => n < 0)
 
   if (negatives.length)
-    throw new Error(`negatives not allowed ${negatives.join(',')}`)
+    throw new Error(`negatives not allowed ${negatives.join(DEFAULT_DELIMITER)}`)
 
   const sum = parsedNumbers.reduce((acc, val) => acc + val)
 
