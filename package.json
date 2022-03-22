@@ -1,0 +1,24 @@
+{
+  "name": "kata-stringcalculator-ts",
+  "version": "1.0.0",
+  "description": "String calculator kata attempt using js/ts",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Jamie Taylor",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "add": "^2.0.6",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "yarn": "^1.22.18"
+  }
+}
